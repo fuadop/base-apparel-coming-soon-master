@@ -1,5 +1,6 @@
 const submitBtn = document.querySelector(".submit-btn");
 const form = document.querySelector(".email");
+const errorMessage = document.querySelector(".error-message");
 
 
 
@@ -9,10 +10,12 @@ form.addEventListener("keyup",()=>{
         form.classList.add("email-input");
         submitBtn.classList.remove("submit-btn-validated");
         submitBtn.classList.add("submit-btn");
+        errorMessage.innerHTML = "";
     }else{
         form.classList.remove("email-input");
         form.classList.add("email-input-validated");
         submitBtn.classList.remove("submit-btn");
         submitBtn.classList.add("submit-btn-validated");
+        errorMessage.innerHTML = "Please provide a valid email";
     }
 })
