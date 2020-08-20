@@ -1,8 +1,10 @@
 const submitBtn = document.querySelector(".submit-btn");
 const form = document.querySelector(".email");
 
-if(window.innerWidth <= 700) window.location = "./mobile.html";
-else window.location = "./index.html";
+setInterval(()=>{
+    if(window.innerWidth <= 700) window.location = "./mobile.html";
+    else window.location = "./index.html";  
+},20000)
 
 form.addEventListener("keydown",()=>{
     if(form.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
