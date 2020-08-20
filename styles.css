@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --DesaturatedRed: hsl(0, 36%, 70%);
+    --SoftRed: hsl(0, 93%, 68%);
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+}
+
+html,body{
+    font-family: "Josefin Sans", Arial;
+    color: var(--DesaturatedRed);
+}
+.main{
+    background: url("images/bg-pattern-desktop.svg");
+}
+
+
+.email-input{
+    border-radius: 40px;
+    width: 35vw;
+    border: 1px solid var(--DesaturatedRed);
+    background: none;
+}
+
+.email-input-validated{
+    border-radius: 40px;
+    width: 35vw;
+    border: 1px solid var(--SoftRed);
+    background: none;
+}
+.mobile-image{
+    display: none;
+}
+
+.desktop-image img{
+    height: 100vh;
+}
+.spaced-text{
+    letter-spacing: 1rem;
+}
+
+.input-field{
+    position: relative;
+}
+.submit-btn{
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    width: 7vw;
+    border-radius: 40px;
+    background: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    box-shadow: 5px 3px 5px;
+}
+
+.submit-btn-validated{
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    width: 7vw;
+    border-radius: 40px;
+    background: linear-gradient(135deg,hsl(0, 0%, 100%),hsl(0, 80%, 86%));
+    box-shadow: 5px 3px 5px;
+}
+
+.submit-btn-validated::before{
+    content: url("images/icon-error.svg");
+    position: absolute;
+    right: 120%;
+}
+
+/* mobile */
+
+.mobile-img{
+    width: 100vw;
+}
